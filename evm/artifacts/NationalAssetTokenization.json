@@ -1,0 +1,165 @@
+{
+  "contractName": "NationalAssetTokenization",
+  "sourceName": "contracts/NationalAssetTokenization.sol",
+  "compiler": "solc-0.8.24-compatible",
+  "sourceSha256": "9f2c9329777a8ac0bf96eacdf17f6fdb9a8418dd8a25a69d17ddbb18ed110bd6",
+  "abi": [
+    {
+      "type": "function",
+      "name": "setAuthorizedVerifier",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "verifier"
+        },
+        {
+          "type": "bool",
+          "name": "status"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "registerNationalAsset",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "assetId"
+        },
+        {
+          "type": "string",
+          "name": "assetName"
+        },
+        {
+          "type": "string",
+          "name": "locationRegion"
+        },
+        {
+          "type": "UtilityCreditType",
+          "name": "creditType"
+        },
+        {
+          "type": "uint256",
+          "name": "totalCapacityUnits"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "recordActiveContribution",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "participant"
+        },
+        {
+          "type": "ActivityContributionType",
+          "name": "activityType"
+        },
+        {
+          "type": "uint256",
+          "name": "quantity"
+        },
+        {
+          "type": "bytes32",
+          "name": "proofHash"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "allocateUtilityUnits",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "assetId"
+        },
+        {
+          "type": "address",
+          "name": "participant"
+        },
+        {
+          "type": "uint256",
+          "name": "units"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "claimFunctionalUtilityCredits",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "assetId"
+        },
+        {
+          "type": "address",
+          "name": "participant"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "redeemFunctionalUtilityCredits",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "assetId"
+        },
+        {
+          "type": "uint256",
+          "name": "creditsToRedeem"
+        },
+        {
+          "type": "bytes32",
+          "name": "serviceReceiptHash"
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "name": "AssetRegistered"
+    },
+    {
+      "type": "event",
+      "name": "ActivityContributionVerified"
+    },
+    {
+      "type": "event",
+      "name": "UtilityUnitsAllocated"
+    },
+    {
+      "type": "event",
+      "name": "FunctionalUtilityCreditIssued"
+    },
+    {
+      "type": "event",
+      "name": "FunctionalUtilityCreditRedeemed"
+    },
+    {
+      "type": "error",
+      "name": "OnlyGovernance"
+    },
+    {
+      "type": "error",
+      "name": "OnlyAuthorizedVerifier"
+    },
+    {
+      "type": "error",
+      "name": "PassiveReturnProhibitedRequiresActiveContribution"
+    },
+    {
+      "type": "error",
+      "name": "MonetaryDividendsAndFiatRailsProhibited"
+    },
+    {
+      "type": "error",
+      "name": "InvalidAssetOrCapacity"
+    },
+    {
+      "type": "error",
+      "name": "InsufficientUtilityCredits"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b509f2c9329777a8ac0bf96eacdf17f6fdb9a8418dd8a25a69d17ddbb18ed110bd6"
+}

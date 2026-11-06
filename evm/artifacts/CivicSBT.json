@@ -1,0 +1,169 @@
+{
+  "contractName": "CivicSBT",
+  "sourceName": "contracts/CivicSBT.sol",
+  "compiler": "solc-0.8.24-compatible",
+  "sourceSha256": "f4c1281f3588f7f8bf0d7129c4191ca7babbc6fb12c156d29055b6a7b71bee70",
+  "abi": [
+    {
+      "type": "function",
+      "name": "setAuthorizedIssuer",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "issuer"
+        },
+        {
+          "type": "bool",
+          "name": "authorized"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "issueSoulboundCredential",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "holder"
+        },
+        {
+          "type": "CredentialCategory",
+          "name": "category"
+        },
+        {
+          "type": "uint16",
+          "name": "levelOrTier"
+        },
+        {
+          "type": "bytes32",
+          "name": "credentialCommitmentHash"
+        },
+        {
+          "type": "string",
+          "name": "issuerAgencyCode"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "revokeCredential",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "tokenId"
+        },
+        {
+          "type": "string",
+          "name": "reason"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "locked",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "tokenId"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "transferFrom",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "address"
+        },
+        {
+          "type": "address",
+          "name": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "safeTransferFrom",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "address"
+        },
+        {
+          "type": "address",
+          "name": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "approve",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "setApprovalForAll",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "address"
+        },
+        {
+          "type": "bool",
+          "name": "bool"
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "name": "Locked"
+    },
+    {
+      "type": "event",
+      "name": "CredentialIssued"
+    },
+    {
+      "type": "event",
+      "name": "CredentialRevoked"
+    },
+    {
+      "type": "error",
+      "name": "OnlyGovernance"
+    },
+    {
+      "type": "error",
+      "name": "OnlyAuthorizedIssuer"
+    },
+    {
+      "type": "error",
+      "name": "SoulboundNonTransferable"
+    },
+    {
+      "type": "error",
+      "name": "InvalidCredentialParameters"
+    },
+    {
+      "type": "error",
+      "name": "CredentialNotFound"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50f4c1281f3588f7f8bf0d7129c4191ca7babbc6fb12c156d29055b6a7b71bee70"
+}

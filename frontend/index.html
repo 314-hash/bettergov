@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BETTERGOV Chain (BGOV) — Sovereign Layer 1 for Public Accountability</title>
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              govNavy: '#0A1628',
+              govNavyLight: '#112240',
+              govGold: '#D4AF37',
+              govGoldBright: '#F59E0B',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#0A1628] text-slate-100 antialiased selection:bg-[#D4AF37] selection:text-[#0A1628]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

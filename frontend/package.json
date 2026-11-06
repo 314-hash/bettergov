@@ -1,0 +1,25 @@
+{
+  "name": "@bettergov/frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BETTERGOV Layer 1 Web Application, Block Explorer, Governance Portal, Public Records Verifier & AI Security Center",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "node --test test-ui.mjs"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}
+

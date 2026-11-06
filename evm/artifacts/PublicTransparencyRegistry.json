@@ -1,0 +1,176 @@
+{
+  "contractName": "PublicTransparencyRegistry",
+  "sourceName": "contracts/PublicTransparencyRegistry.sol",
+  "compiler": "solc-0.8.24-compatible",
+  "sourceSha256": "f9c9487a51a8a4f2231b5483351ddf897a7978ddf2df5f3d90c7797942ba0727",
+  "abi": [
+    {
+      "type": "function",
+      "name": "setAuditor",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "auditor"
+        },
+        {
+          "type": "bool",
+          "name": "authorized"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "anchorDocument",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "id"
+        },
+        {
+          "type": "bytes32",
+          "name": "documentSha256"
+        },
+        {
+          "type": "string",
+          "name": "agencyCode"
+        },
+        {
+          "type": "string",
+          "name": "offChainUri"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "verifyDocumentByAuditor",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "id"
+        },
+        {
+          "type": "VerificationStatus",
+          "name": "verdict"
+        },
+        {
+          "type": "bytes32",
+          "name": "auditorAttestationHash"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "recordProcurement",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "id"
+        },
+        {
+          "type": "string",
+          "name": "tenderReference"
+        },
+        {
+          "type": "string",
+          "name": "procuringEntity"
+        },
+        {
+          "type": "bytes32",
+          "name": "tenderNoticeHash"
+        },
+        {
+          "type": "bytes32",
+          "name": "bidEvaluationHash"
+        },
+        {
+          "type": "address",
+          "name": "winningBidder"
+        },
+        {
+          "type": "uint256",
+          "name": "contractValueAbgov"
+        },
+        {
+          "type": "uint32",
+          "name": "bidsCount"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "registerProject",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "id"
+        },
+        {
+          "type": "string",
+          "name": "projectName"
+        },
+        {
+          "type": "string",
+          "name": "department"
+        },
+        {
+          "type": "bytes32",
+          "name": "specificationHash"
+        },
+        {
+          "type": "address",
+          "name": "contractor"
+        },
+        {
+          "type": "uint256",
+          "name": "totalBudgetAbgov"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getCounts",
+      "inputs": []
+    },
+    {
+      "type": "event",
+      "name": "AuditorUpdated"
+    },
+    {
+      "type": "event",
+      "name": "DocumentAnchored"
+    },
+    {
+      "type": "event",
+      "name": "DocumentAuditVerified"
+    },
+    {
+      "type": "event",
+      "name": "ProcurementRecorded"
+    },
+    {
+      "type": "event",
+      "name": "ProjectRegistered"
+    },
+    {
+      "type": "error",
+      "name": "UnauthorizedGovernance"
+    },
+    {
+      "type": "error",
+      "name": "UnauthorizedAuditor"
+    },
+    {
+      "type": "error",
+      "name": "RecordAlreadyExists"
+    },
+    {
+      "type": "error",
+      "name": "RecordNotFound"
+    },
+    {
+      "type": "error",
+      "name": "InvalidHash"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50f9c9487a51a8a4f2231b5483351ddf897a7978ddf2df5f3d90c7797942ba0727"
+}

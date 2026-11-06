@@ -1,0 +1,37 @@
+# BETTERGOV Validator & Sentry Node Configuration (CometBFT + Cosmos EVM)
+# SECURITY RULE: Keep administrative RPC and validator signing interfaces bound strictly to loopback (127.0.0.1).
+
+moniker = "bettergov-validator"
+db_backend = "goleveldb"
+
+[rpc]
+# Private Validator Admin RPC MUST NOT be exposed to 0.0.0.0
+laddr = "tcp://127.0.0.1:26657"
+cors_allowed_origins = []
+unsafe = false
+
+[p2p]
+laddr = "tcp://0.0.0.0:26656"
+external_address = ""
+seeds = ""
+persistent_peers = ""
+pex = true
+addr_book_strict = true
+max_num_inbound_peers = 40
+max_num_outbound_peers = 15
+flush_throttle_timeout = "100ms"
+
+[consensus]
+timeout_propose = "2s"
+timeout_prevote = "1s"
+timeout_precommit = "1s"
+timeout_commit = "3s"
+double_sign_check_height = 10
+
+[evm_json_rpc]
+enable = true
+address = "127.0.0.1:8545"
+ws_address = "127.0.0.1:8546"
+api = "eth,net,web3"
+gas_cap = 25000000
+

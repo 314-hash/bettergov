@@ -1,0 +1,135 @@
+{
+  "chain_id": "bettergov-devnet-1",
+  "evm_chain_id": 31337,
+  "genesis_time": "2026-01-01T00:00:00Z",
+  "economic_params": {
+    "inflation_rate_bps": 400,
+    "inflation_min_bps": 100,
+    "inflation_max_bps": 800,
+    "inflation_rate_change_bps": 300,
+    "goal_bonded_bps": 6700,
+    "blocks_per_year": 6311520,
+    "community_tax_bps": 1000,
+    "base_proposer_reward_bps": 100,
+    "bonus_proposer_reward_bps": 400
+  },
+  "staking_params": {
+    "max_validators": 0,
+    "unlimited_validators": true,
+    "unbonding_time_seconds": 60,
+    "max_entries": 7,
+    "min_commission_rate_bps": 500,
+    "bond_denom": "abgov"
+  },
+  "slashing_params": {
+    "signed_blocks_window": 100,
+    "min_signed_per_window_bps": 5000,
+    "downtime_jail_duration_seconds": 600,
+    "slash_fraction_double_sign_bps": 500,
+    "slash_fraction_downtime_bps": 50
+  },
+  "gov_params": {
+    "min_deposit_abgov": 1000000000000000000000,
+    "max_deposit_period_sec": 172800,
+    "voting_period_sec": 120,
+    "quorum_bps": 3340,
+    "threshold_bps": 5000,
+    "veto_threshold_bps": 3340
+  },
+  "accounts": [
+    {
+      "address": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+      "balance_abgov": "10000000000000000000000000"
+    },
+    {
+      "address": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+      "balance_abgov": "10000000000000000000000000"
+    },
+    {
+      "address": "0x90f79bf6eb2c4f870365e785982e1f101e93b906",
+      "balance_abgov": "10000000000000000000000000"
+    },
+    {
+      "address": "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65",
+      "balance_abgov": "10000000000000000000000000"
+    },
+    {
+      "address": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+      "balance_abgov": "25000000000000000000000000"
+    },
+    {
+      "address": "bgov1pool_community_treasury_00000000000",
+      "balance_abgov": "20000000000000000000000000"
+    }
+  ],
+  "validators": [
+    {
+      "operator_address": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+      "consensus_pubkey_hex": "1111111111111111111111111111111111111111111111111111111111111111",
+      "moniker": "Sentinel-Alpha-Node",
+      "website": "https://alpha.validator.bettergov.org",
+      "security_contact": "sec-ops-alpha",
+      "details": "Primary Civic Infrastructure Validator — Manila Zone",
+      "self_bond_abgov": "2500000000000000000000000",
+      "min_self_delegation_abgov": "50000000000000000000000",
+      "commission": {
+        "rate_bps": 500,
+        "max_rate_bps": 2000,
+        "max_change_rate_bps": 100,
+        "updated_at": "0001-01-01T00:00:00Z"
+      }
+    },
+    {
+      "operator_address": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+      "consensus_pubkey_hex": "2222222222222222222222222222222222222222222222222222222222222222",
+      "moniker": "CivicTrust-Validator",
+      "website": "https://civictrust.bettergov.org",
+      "security_contact": "sec-ops-civictrust",
+      "details": "Public Accountability \u0026 Open Data Validator — Cebu Zone",
+      "self_bond_abgov": "2000000000000000000000000",
+      "min_self_delegation_abgov": "50000000000000000000000",
+      "commission": {
+        "rate_bps": 700,
+        "max_rate_bps": 2000,
+        "max_change_rate_bps": 100,
+        "updated_at": "0001-01-01T00:00:00Z"
+      }
+    },
+    {
+      "operator_address": "0x90f79bf6eb2c4f870365e785982e1f101e93b906",
+      "consensus_pubkey_hex": "3333333333333333333333333333333333333333333333333333333333333333",
+      "moniker": "Aegis-GovTech-Staking",
+      "website": "https://aegis.bettergov.org",
+      "security_contact": "sec-ops-aegis",
+      "details": "High-Availability Institutional Validator — Davao Zone",
+      "self_bond_abgov": "1800000000000000000000000",
+      "min_self_delegation_abgov": "50000000000000000000000",
+      "commission": {
+        "rate_bps": 600,
+        "max_rate_bps": 1500,
+        "max_change_rate_bps": 100,
+        "updated_at": "0001-01-01T00:00:00Z"
+      }
+    },
+    {
+      "operator_address": "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65",
+      "consensus_pubkey_hex": "4444444444444444444444444444444444444444444444444444444444444444",
+      "moniker": "OpenLedger-Guard",
+      "website": "https://openledger.bettergov.org",
+      "security_contact": "sec-ops-openledger",
+      "details": "Independent Academic \u0026 Audit Validator",
+      "self_bond_abgov": "1500000000000000000000000",
+      "min_self_delegation_abgov": "50000000000000000000000",
+      "commission": {
+        "rate_bps": 500,
+        "max_rate_bps": 2000,
+        "max_change_rate_bps": 100,
+        "updated_at": "0001-01-01T00:00:00Z"
+      }
+    }
+  ],
+  "initial_auditors": [
+    "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+    "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65"
+  ]
+}

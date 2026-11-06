@@ -1,0 +1,13 @@
+{
+  "name": "@bettergov/ai-security",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "T3MP3ST-Inspired Multi-Agent Defensive AI Security Subsystem for BETTERGOV Chain",
+  "scripts": {
+    "test": "node --test tests/ai-security.test.mjs",
+    "audit": "node orchestration/run-audit.mjs",
+    "mcp": "node orchestration/mcp-server.mjs"
+  }
+}
+

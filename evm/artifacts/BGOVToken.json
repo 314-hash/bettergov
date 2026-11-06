@@ -1,0 +1,128 @@
+{
+  "contractName": "BGOVToken",
+  "sourceName": "contracts/BGOVToken.sol",
+  "compiler": "solc-0.8.24-compatible",
+  "sourceSha256": "faebb84b73e2f2e4caf9e8eaff7a7619cb09b65b1bb07c15af41ff7ea2aec883",
+  "abi": [
+    {
+      "type": "function",
+      "name": "deposit",
+      "inputs": []
+    },
+    {
+      "type": "function",
+      "name": "withdraw",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "amount"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "approve",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "spender"
+        },
+        {
+          "type": "uint256",
+          "name": "amount"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "transfer",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "to"
+        },
+        {
+          "type": "uint256",
+          "name": "amount"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "transferFrom",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "from"
+        },
+        {
+          "type": "address",
+          "name": "to"
+        },
+        {
+          "type": "uint256",
+          "name": "amount"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "_transfer",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "from"
+        },
+        {
+          "type": "address",
+          "name": "to"
+        },
+        {
+          "type": "uint256",
+          "name": "amount"
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "name": "Transfer"
+    },
+    {
+      "type": "event",
+      "name": "Approval"
+    },
+    {
+      "type": "event",
+      "name": "Deposit"
+    },
+    {
+      "type": "event",
+      "name": "Withdrawal"
+    },
+    {
+      "type": "error",
+      "name": "OnlyGovernance"
+    },
+    {
+      "type": "error",
+      "name": "InsufficientBalance"
+    },
+    {
+      "type": "error",
+      "name": "InsufficientAllowance"
+    },
+    {
+      "type": "error",
+      "name": "ZeroAddressProhibited"
+    },
+    {
+      "type": "error",
+      "name": "ReentrancyBlocked"
+    },
+    {
+      "type": "error",
+      "name": "NativeTransferFailed"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50faebb84b73e2f2e4caf9e8eaff7a7619cb09b65b1bb07c15af41ff7ea2aec883"
+}

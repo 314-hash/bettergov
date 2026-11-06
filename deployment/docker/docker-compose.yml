@@ -1,0 +1,52 @@
+version: "3.9"
+
+services:
+  bettergov-node:
+    build:
+      context: ../..
+      dockerfile: deployment/docker/Dockerfile
+    container_name: bettergov-node
+    ports:
+      - "127.0.0.1:8545:8545"
+      - "26656:26656"
+    restart: unless-stopped
+
+  bettergov-postgres:
+    image: postgres:16-alpine
+    container_name: bettergov-postgres
+    environment:
+      POSTGRES_USER: bettergov
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bettergov_dev_only}
+      POSTGRES_DB: bettergov_indexer
+    volumes:
+      - ../../indexer/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    ports:
+      - "127.0.0.1:5432:5432"
+    restart: unless-stopped
+
+  bettergov-backend:
+    image: node:22-alpine
+    container_name: bettergov-backend
+    working_dir: /app/backend
+    volumes:
+      - ../..:/app
+    environment:
+      PORT: "4000"
+      BETTERGOV_RPC_URL: "http://bettergov-node:8545"
+    command: ["node", "src/server.mjs"]
+    ports:
+      - "127.0.0.1:4000:4000"
+    depends_on:
+      - bettergov-node
+      - bettergov-postgres
+
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    container_name: bettergov-prometheus
+    volumes:
+      - ../monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ../monitoring/alerts.yml:/etc/prometheus/alerts.yml:ro
+    ports:
+      - "127.0.0.1:9090:9090"
+    restart: unless-stopped
+

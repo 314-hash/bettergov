@@ -1,0 +1,16 @@
+{
+  "name": "@bettergov/evm-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BETTERGOV EVM Smart Contracts (PublicTransparencyRegistry, TreasuryVault, ValidatorSlashingEvidence)",
+  "scripts": {
+    "compile": "node script/compile.mjs",
+    "test": "node --test test/contracts.test.mjs",
+    "deploy:devnet": "node script/deploy.mjs"
+  },
+  "devDependencies": {
+    "solc": "^0.8.28"
+  }
+}
+

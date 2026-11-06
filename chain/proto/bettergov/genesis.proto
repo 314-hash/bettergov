@@ -1,0 +1,29 @@
+syntax = "proto3";
+package bettergov.v1;
+
+option go_package = "github.com/bettergov/chain/app;app";
+
+message ValidatorProto {
+  string operator_address = 1;
+  string consensus_address = 2;
+  string consensus_pubkey_hex = 3;
+  string moniker = 4;
+  bool jailed = 5;
+  bool tombstoned = 6;
+  string status = 7;
+  string tokens = 8;
+  string delegator_shares = 9;
+}
+
+message PublicDocumentProto {
+  string id = 1;
+  string title = 2;
+  string agency_code = 3;
+  string document_sha256 = 4;
+  string off_chain_uri = 5;
+  string submitter = 6;
+  int64 block_height = 7;
+  string verification_status = 8;
+  string attestation_disclaimer = 9;
+}
+

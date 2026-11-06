@@ -1,0 +1,12 @@
+{
+  "name": "@bettergov/backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BETTERGOV API Backend, Explorer Gateway, Transparency PII Guard, and AI Security Coordinator Service",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test src/backend.test.mjs"
+  }
+}
+

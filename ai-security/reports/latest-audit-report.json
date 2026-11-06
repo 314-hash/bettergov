@@ -1,0 +1,24 @@
+{
+  "reportId": "BGOV-AUDIT-1793900349903",
+  "generatedAt": "2026-11-05T17:39:09.903Z",
+  "missionName": "BETTERGOV Repository & Protocol Audit",
+  "totalFindings": 0,
+  "verifiedToolProvenCount": 0,
+  "unverifiedBlockedCount": 0,
+  "bySeverity": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "info": 0
+  },
+  "permissionAttestation": {
+    "canChangeConsensus": false,
+    "canAccessValidatorPrivateKeys": false,
+    "canExecuteArbitraryTransactions": false,
+    "canSeizeUserFunds": false
+  },
+  "findings": [],
+  "reportSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "markdown": "# BETTERGOV AI Security Audit Report\n- **Report ID**: `BGOV-AUDIT-1793900349903`\n- **Mission**: BETTERGOV Repository & Protocol Audit\n- **Generated At**: 2026-11-05T17:39:09.903Z\n- **Findings Ledger SHA-256**: `4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945`\n- **Total Findings**: 0 (0 Tool-Verified, 0 Unverified/Gate-Blocked)\n\n## Verified Findings (Passed Live Verification Gate)\n_No verified findings recorded._"
+}

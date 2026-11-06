@@ -1,0 +1,18 @@
+groups:
+  - name: bettergov_consensus_and_validator_alerts
+    rules:
+      - alert: ValidatorDowntimeRisk
+        expr: bettergov_validator_missed_blocks > 25
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Validator missed >25% of signing window on BETTERGOV Chain"
+      - alert: ConsensusBFTConcentrationWarning
+        expr: bettergov_validator_voting_power_share_bps >= 3334
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Single validator controls >=33.34% of bonded voting power"
+

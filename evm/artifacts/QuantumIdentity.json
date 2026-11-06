@@ -1,0 +1,119 @@
+{
+  "contractName": "QuantumIdentity",
+  "sourceName": "contracts/QuantumIdentity.sol",
+  "compiler": "solc-0.8.24-compatible",
+  "sourceSha256": "ba4dbb0329ab8708e89a7543c335097942f7e60e8bf3ce3f89ce367f3985874e",
+  "abi": [
+    {
+      "type": "function",
+      "name": "setAlgorithmPrecompileVerifier",
+      "inputs": [
+        {
+          "type": "AlgorithmType",
+          "name": "algorithm"
+        },
+        {
+          "type": "address",
+          "name": "precompileAddress"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "registerAgilePublicKey",
+      "inputs": [
+        {
+          "type": "AlgorithmType",
+          "name": "algorithm"
+        },
+        {
+          "type": "bytes",
+          "name": "publicKey"
+        },
+        {
+          "type": "bool",
+          "name": "setAsPreferred"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "revokeAgilePublicKey",
+      "inputs": [
+        {
+          "type": "AlgorithmType",
+          "name": "algorithm"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "getKeySlot",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "subject"
+        },
+        {
+          "type": "AlgorithmType",
+          "name": "algorithm"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "verifyWithAgilePrecompile",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "subject"
+        },
+        {
+          "type": "AlgorithmType",
+          "name": "algorithm"
+        },
+        {
+          "type": "bytes32",
+          "name": "messageDigest"
+        },
+        {
+          "type": "bytes",
+          "name": "signature"
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "name": "AgileKeyRegistered"
+    },
+    {
+      "type": "event",
+      "name": "AgileKeyRevoked"
+    },
+    {
+      "type": "event",
+      "name": "PreferredAlgorithmUpdated"
+    },
+    {
+      "type": "event",
+      "name": "PostQuantumPrecompileConfigured"
+    },
+    {
+      "type": "error",
+      "name": "OnlyGovernance"
+    },
+    {
+      "type": "error",
+      "name": "InvalidPublicKeyLength"
+    },
+    {
+      "type": "error",
+      "name": "KeySlotNotActive"
+    },
+    {
+      "type": "error",
+      "name": "PrecompileVerifierNotConfigured"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50ba4dbb0329ab8708e89a7543c335097942f7e60e8bf3ce3f89ce367f3985874e"
+}

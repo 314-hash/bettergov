@@ -1,0 +1,49 @@
+name: BETTERGOV Chain CI & Security Verification
+
+on:
+  push:
+    branches: ["main", "develop"]
+  pull_request:
+
+jobs:
+  chain-go-tests:
+    name: Layer 1 Go Protocol, Staking, Slashing, Gov & EVM Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+      - name: Run Protocol Unit, Integration & Fuzz Seed Tests
+        working-directory: chain
+        run: |
+          go test -v -race ./...
+          go build -trimpath -o bettergovd ./cmd/bettergovd
+          ./bettergovd genesis-validate --file ../genesis/devnet/genesis.json
+          ./bettergovd genesis-validate --file ../genesis/testnet/genesis.json
+
+  evm-and-ai-security-tests:
+    name: EVM Contracts, AI Security Swarm, Backend & Frontend Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Compile & Test EVM Solidity Contracts
+        working-directory: evm
+        run: |
+          node script/compile.mjs
+          node --test test/contracts.test.mjs
+      - name: Test T3MP3ST-Inspired 9-Agent AI Security Subsystem
+        working-directory: ai-security
+        run: |
+          node --test tests/ai-security.test.mjs
+          node orchestration/run-audit.mjs
+      - name: Test Backend API, Explorer & PII Guard
+        working-directory: backend
+        run: node --test src/backend.test.mjs
+      - name: Test Frontend 11-Page Application Structure
+        working-directory: frontend
+        run: node --test test-ui.mjs
+

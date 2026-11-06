@@ -1,0 +1,42 @@
+{
+  "_comment": "MAINNET GENESIS TEMPLATE ONLY — DO NOT DEPLOY UNTIL INDEPENDENT SECURITY AUDITS ARE COMPLETED AND EIP-155 / COSMOS CHAIN REGISTRY IDENTIFIERS ARE VERIFIED AVAILABLE.",
+  "chain_id": "TBD_VERIFY_IN_COSMOS_CHAIN_REGISTRY_BEFORE_MAINNET",
+  "evm_chain_id": 0,
+  "genesis_time": "2027-01-01T00:00:00Z",
+  "economic_params": {
+    "inflation_rate_bps": 400,
+    "inflation_min_bps": 100,
+    "inflation_max_bps": 800,
+    "inflation_rate_change_bps": 300,
+    "goal_bonded_bps": 6700,
+    "blocks_per_year": 6311520,
+    "community_tax_bps": 1000,
+    "base_proposer_reward_bps": 100,
+    "bonus_proposer_reward_bps": 400
+  },
+  "staking_params": {
+    "max_validators": 100,
+    "unbonding_time_seconds": 1814400,
+    "max_entries": 7,
+    "min_commission_rate_bps": 500,
+    "bond_denom": "abgov"
+  },
+  "slashing_params": {
+    "signed_blocks_window": 10000,
+    "min_signed_per_window_bps": 5000,
+    "downtime_jail_duration_seconds": 600,
+    "slash_fraction_double_sign_bps": 500,
+    "slash_fraction_downtime_bps": 50
+  },
+  "gov_params": {
+    "min_deposit_abgov": 5000000000000000000000,
+    "max_deposit_period_sec": 172800,
+    "voting_period_sec": 604800,
+    "quorum_bps": 3340,
+    "threshold_bps": 5000,
+    "veto_threshold_bps": 3340
+  },
+  "accounts": [],
+  "validators": [],
+  "initial_auditors": []
+}

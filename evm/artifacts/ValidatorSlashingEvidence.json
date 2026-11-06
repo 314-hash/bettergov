@@ -1,0 +1,52 @@
+{
+  "contractName": "ValidatorSlashingEvidence",
+  "sourceName": "contracts/ValidatorSlashingEvidence.sol",
+  "compiler": "solc-0.8.24-compatible",
+  "sourceSha256": "aa2dcbb241d14bdd661139fc93ca4c0e440a8a19306a79d6316ca74eb84ae248",
+  "abi": [
+    {
+      "type": "function",
+      "name": "submitDoubleSignEvidence",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "consensusPubkeyHash"
+        },
+        {
+          "type": "uint64",
+          "name": "height"
+        },
+        {
+          "type": "uint32",
+          "name": "round"
+        },
+        {
+          "type": "bytes32",
+          "name": "blockHashA"
+        },
+        {
+          "type": "bytes32",
+          "name": "blockHashB"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "totalEvidenceCount",
+      "inputs": []
+    },
+    {
+      "type": "event",
+      "name": "DoubleSignEvidenceSubmitted"
+    },
+    {
+      "type": "error",
+      "name": "InvalidEquivocationParameters"
+    },
+    {
+      "type": "error",
+      "name": "DuplicateEvidence"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50aa2dcbb241d14bdd661139fc93ca4c0e440a8a19306a79d6316ca74eb84ae248"
+}

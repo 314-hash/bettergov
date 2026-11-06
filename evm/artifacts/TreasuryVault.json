@@ -1,0 +1,111 @@
+{
+  "contractName": "TreasuryVault",
+  "sourceName": "contracts/TreasuryVault.sol",
+  "compiler": "solc-0.8.24-compatible",
+  "sourceSha256": "8c0f72d6f73a47ab6254fd1ab36e461011dc90d51d0ccb9750a4cef39be4cf19",
+  "abi": [
+    {
+      "type": "function",
+      "name": "setPaused",
+      "inputs": [
+        {
+          "type": "bool",
+          "name": "_paused"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "createGrant",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "grantId"
+        },
+        {
+          "type": "address",
+          "name": "recipient"
+        },
+        {
+          "type": "uint256",
+          "name": "totalAllocated"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "releaseMilestone",
+      "inputs": [
+        {
+          "type": "bytes32",
+          "name": "grantId"
+        },
+        {
+          "type": "uint256",
+          "name": "amount"
+        },
+        {
+          "type": "ActiveContributionCategory",
+          "name": "activityCategory"
+        },
+        {
+          "type": "bytes32",
+          "name": "auditProofHash"
+        },
+        {
+          "type": "bytes32",
+          "name": "activityContributionProofHash"
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "name": "TreasuryFunded"
+    },
+    {
+      "type": "event",
+      "name": "GrantCreated"
+    },
+    {
+      "type": "event",
+      "name": "MilestoneReleased"
+    },
+    {
+      "type": "event",
+      "name": "EmergencyPauseToggled"
+    },
+    {
+      "type": "error",
+      "name": "OnlyGovernance"
+    },
+    {
+      "type": "error",
+      "name": "OnlyGuardianOrGovernance"
+    },
+    {
+      "type": "error",
+      "name": "VaultPaused"
+    },
+    {
+      "type": "error",
+      "name": "ReentrancyBlocked"
+    },
+    {
+      "type": "error",
+      "name": "InvalidGrant"
+    },
+    {
+      "type": "error",
+      "name": "PassiveReleaseProhibitedRequiresActivityProof"
+    },
+    {
+      "type": "error",
+      "name": "ExceedsAllocation"
+    },
+    {
+      "type": "error",
+      "name": "TransferFailed"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b508c0f72d6f73a47ab6254fd1ab36e461011dc90d51d0ccb9750a4cef39be4cf19"
+}
