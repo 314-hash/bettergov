@@ -11,6 +11,8 @@ export type PageKey =
   | 'developers'
   | 'docs';
 
+export type VoteOption = 'YES' | 'NO' | 'ABSTAIN' | 'VETO';
+
 export interface ValidatorProfile {
   operatorAddress: string;
   consensusAddress: string;
